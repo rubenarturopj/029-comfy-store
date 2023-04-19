@@ -17,7 +17,7 @@ const setupSearch = (store) => {
                 }
             });
 
-            display(newStore, getElement(".products-container"));
+            display(newStore, getElement(".products-container"), true); // "true" value will be used in displayProducts.js as a paremeter to return from the function and avoid duplication of items
 
             if (newStore.length < 1) {
                 const products = getElement(".products-container");
@@ -25,7 +25,7 @@ const setupSearch = (store) => {
             }
         } else {
             // if value is undefined, then display all products
-            display(store, getElement(".products-container"));
+            display(store, getElement(".products-container"), true);
         }
     });
 };

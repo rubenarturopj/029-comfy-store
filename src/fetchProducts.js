@@ -4,11 +4,11 @@ const fetchProducts = async () => {
     try {
         const response = await fetch(allProductsUrl);
 
-        // if error while fetching
+        // if there was no error while fetching
         if (response) {
             return response.json();
         }
-
+        // otherwise...
         return response;
     } catch (error) {
         console.log(error);

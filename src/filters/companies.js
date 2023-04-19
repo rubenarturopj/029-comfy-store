@@ -32,7 +32,7 @@ const setupCompanies = (store) => {
                     return product.company === event.target.textContent;
                 });
             }
-            display(newStore, getElement(".products-container"));
+            display(newStore, getElement(".products-container"), true);
         }
     });
 };
