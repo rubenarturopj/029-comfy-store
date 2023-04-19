@@ -14,6 +14,13 @@ const setupStore = (products) => {
     setStorageItem("store", store);
 };
 
-const findProduct = () => {};
+// to search the specific item that has this ID in the full list of items
+const findProduct = (id) => {
+    let product = store.find((product) => {
+        return product.id === id;
+    });
+
+    return product;
+};
 
 export { store, setupStore, findProduct };
